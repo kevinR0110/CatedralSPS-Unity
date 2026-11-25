@@ -78,6 +78,7 @@ public class Hemisferio : MonoBehaviour
         malla.normals = normales;
         malla.uv = uvs;
         malla.triangles = triangulos.ToArray();
+        malla.RecalculateTangents();
         GetComponent<MeshFilter>().sharedMesh = malla;
     }
 }

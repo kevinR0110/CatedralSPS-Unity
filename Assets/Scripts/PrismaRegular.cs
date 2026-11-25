@@ -72,6 +72,7 @@ public class PrismaRegular : MonoBehaviour
         malla.SetNormals(normales);
         malla.SetUVs(0, uvs);
         malla.SetTriangles(triangulos, 0);
+        malla.RecalculateTangents();
         GetComponent<MeshFilter>().sharedMesh = malla;
     }
 

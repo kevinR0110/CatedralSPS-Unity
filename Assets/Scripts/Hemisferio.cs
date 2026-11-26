@@ -80,5 +80,9 @@ public class Hemisferio : MonoBehaviour
         malla.triangles = triangulos.ToArray();
         malla.RecalculateTangents();
         GetComponent<MeshFilter>().sharedMesh = malla;
+
+        // Si el objeto tiene un MeshCollider, se actualiza para que el jugador choque
+        MeshCollider colision = GetComponent<MeshCollider>();
+        if (colision != null) colision.sharedMesh = malla;
     }
 }
